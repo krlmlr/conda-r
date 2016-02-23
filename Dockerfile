@@ -24,3 +24,5 @@ RUN chmod +x Miniconda-latest-Linux-x86_64.sh
 RUN ./Miniconda-latest-Linux-x86_64.sh -b
 
 ENV PATH /root/miniconda2/bin:$PATH
+
+RUN conda install -c r r r-devtools
