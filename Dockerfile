@@ -8,14 +8,14 @@
 ########################################################
 
 ## Choose your base image, e.g., rocker/drd:latest or rwercker/base:latest
-FROM ubuntu:latest
+FROM ubuntu:15.10
 
 ## Edit maintainer information as appropritate
 MAINTAINER "Kirill Müller" krlmlr+github@mailbox.org
 
 RUN apt-get update
 
-RUN apt-get install -y curl
+RUN apt-get install -y curl bzip2
 
 RUN curl -O https://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
 
