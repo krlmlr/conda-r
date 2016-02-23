@@ -32,3 +32,9 @@ RUN conda install -c r r-bh r-rcpp
 RUN apt-get install -y build-essential
 
 RUN apt-get install -y unzip
+
+RUN apt-get install -y libpq-dev
+
+RUN Rscript -e "httr::set_config( httr::config( ssl_verifypeer = 0L ) ); devtools::install_github(c('rstats-db/DBI'), dep = FALSE)"
+
+RUN Rscript -e "httr::set_config( httr::config( ssl_verifypeer = 0L ) ); devtools::install_github(c('rstats-db/RPostgres'), dep = FALSE)"
